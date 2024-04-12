@@ -32,6 +32,8 @@ logger.debug('This is an debug message');
 logger.error('This is an error message');
 ```
 
+[examples](https://github.com/niradler/baloga/blob/master/examples.js)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

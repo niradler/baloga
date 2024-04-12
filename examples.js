@@ -32,13 +32,11 @@ loggerNoLevel.error({
 });
 
 class JsonLogger extends Logger {
-    constructor(options) {
-        super(options);
-    }
+  constructor(options) {
+    super(options);
+  }
 
   output(level, args) {
-    const { hideLevel, disableColor } = this.options;
-
     if (!this.isValidLevel(level)) {
       throw new Error(`Invalid log level, ${level}`);
     }
@@ -47,27 +45,23 @@ class JsonLogger extends Logger {
       return;
     }
 
-    if (!hideLevel) {
-      const levelString = disableColor
-        ? level.toUpperCase()
-        : this.stringWithColor(level.toUpperCase(), this.levelToColor(level));
-      args = [levelString, ...args];
-    }
-
     const prefix = this.prefix();
     const suffix = this.suffix();
 
-       console[level](JSON.stringify({
+    console[level](
+      JSON.stringify({
+        level: level,
         message: args.length > 1 ? args : args[0],
         prefix: prefix,
         suffix: suffix,
-    }));
+      })
+    );
   }
 }
 
-const jsonLogger = new JsonLogger({ hideLevel: true, disableColor: true });
+const jsonLogger = new JsonLogger({});
 
 jsonLogger.info({
-    logger: "jsonLogger",
-    message: "info message",
+  logger: "jsonLogger",
+  message: "info message",
 });
