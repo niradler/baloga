@@ -35,6 +35,10 @@ class JsonLogger extends Logger {
   constructor(options) {
     super(options);
   }
+  
+  prefix(){
+    return "JSONLogger";
+  }
 
   output(level, args) {
     if (!this.isValidLevel(level)) {
