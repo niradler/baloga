@@ -1,12 +1,19 @@
 {
   "name": "baloga",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Baloga is a simple and fast logging library for Node.js, designed to provide easy-to-use logging functionality with native console log support and log level configuration.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["logger", "log", "logging", "loggers", "simple", "console"],
+  "keywords": [
+    "logger",
+    "log",
+    "logging",
+    "loggers",
+    "simple",
+    "console"
+  ],
   "author": "Nir Adler",
   "license": "MIT"
 }
